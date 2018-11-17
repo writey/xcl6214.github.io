@@ -307,6 +307,17 @@
 <p>刚刚加入的normalize.css托管在cdnjs.com上，这是一个公共服务器，是内容分发网络的一部分<br>cdn在世界各地都有服务器，每台服务器上都有相同文件的副本。用户发出请求后，将通过最近的服务器返回文件，减少加载时间<br>cdnjs.com上托管了各种版本的前端流行库和框架</p>
 </blockquote>
 <h3 id="css样式优先级"><a href="#css样式优先级" class="headerlink" title="css样式优先级"></a>css样式优先级</h3><blockquote>
+<p>优先级确保样式仅应用于特定的一组元素，且决定了选择器的相对权重。若样式表包含应用与想象铜元素的多个样式，将会应用选择其优先级较高的样式</p>
+</blockquote>
+<h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><blockquote>
+<p>一个元素的的盒模型由四个部分组成：内容、内边距、边框、外边距<br>display:block 可以使元素占据包含它们的元素的完整宽度<br>display:inline是元素宽度与内容自适应</p>
+</blockquote>
+<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href=&quot;#&quot;] &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为所有 href属性为#的 a标签添加 下划线为none的属性<br>为image设置width:100%的属性可以使图片随着父容器大小而改变，如改变窗口大小时</p>
+</blockquote>
+<h3 id="样式继承"><a href="#样式继承" class="headerlink" title="样式继承"></a>样式继承</h3><blockquote>
+<p>并非所有属性都会被继承，border就不行</p>
 </blockquote>
 
           
@@ -556,7 +567,10 @@
         
           
             <h2 id="Atom官网-atom-io"><a href="#Atom官网-atom-io" class="headerlink" title="Atom官网:atom.io"></a>Atom官网:atom.io</h2><h4 id="Atom插件"><a href="#Atom插件" class="headerlink" title="Atom插件"></a>Atom插件</h4><blockquote>
-<p>File-&gt;Settings control + ， 打开setting面板  点击install<br>emmet插件:可以用一些速记符生成符合语法规则的HTML<br>atom-beautify:辅助缩进，提高代码可读性<br>autocomplete-paths：输入文件名时自动补全引用<br>api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示<br>linter：检查代码风格和语法的程序，部分插件的前置插件<br>linter-csslint：提供编写高性能css的建议<br>linter-htmlhint：HTML保持良好格式<br>linter-eslint:检查JavaScript代码的语法，还能通过配置检查代码的风格和格式<br>默认镜像地址为国外的，atom使用apm方式下载，修改apm镜像地址为中国<br><code>apm config set registry http://registry.npm.taobao.org</code><br>前端参考文档：mdn</p>
+<p>File-&gt;Settings control + ， 打开setting面板  点击install<br>emmet插件:可以用一些速记符生成符合语法规则的HTML<br>atom-beautify:辅助缩进，提高代码可读性<br>autocomplete-paths：输入文件名时自动补全引用<br>api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示<br>linter：检查代码风格和语法的程序，部分插件的前置插件<br>linter-csslint：提供编写高性能css的建议//不建议使用，建议使用linter-stylelint<br>linter-stylelint使用方法:在项目根目录新建官方文档的几种文件类型，我的是.stylelintrc.json<br>安装标准配置<code>npm install stylelint-config-standard --save-dev</code><br>.stylelintrc.json文件中引入配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;extends&quot;: &quot;stylelint-config-standard&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>linter-htmlhint：HTML保持良好格式<br>linter-eslint:检查JavaScript代码的语法，还能通过配置检查代码的风格和格式<br>默认镜像地址为国外的，atom使用apm方式下载，修改apm镜像地址为中国<br><code>apm config set registry http://registry.npm.taobao.org</code><br>前端参考文档：mdn</p>
 </blockquote>
 <h4 id="基础命令行"><a href="#基础命令行" class="headerlink" title="基础命令行"></a>基础命令行</h4><blockquote>
 <p>查看当前路径 win:echo %cd%  mac: pwd<br>新建目录: mkdir    新建front-end-dev-book和它的子目录ottergram<br>mac:mkdir font-end-dev-book/ottergram<br>win使用反斜杠: font-end-dev-book\ottergram<br>切换目录:cd<br>列出目录中文件:mac:ls win:dir<br>获取管理员权限:mac:命令前加上sudo win直接用管理员打开<br>退出:ctrl+c</p>

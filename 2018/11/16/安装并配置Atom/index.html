@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Atom官网:atom.ioAtom插件 File-&amp;gt;Settings control + ， 打开setting面板  点击installemmet插件:可以用一些速记符生成符合语法规则的HTMLatom-beautify:辅助缩进，提高代码可读性autocomplete-paths：输入文件名时自动补全引用api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示lint">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-16T12:19:55.870Z">
+<meta property="og:updated_time" content="2018-11-17T18:17:19.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装并配置Atom">
 <meta name="twitter:description" content="Atom官网:atom.ioAtom插件 File-&amp;gt;Settings control + ， 打开setting面板  点击installemmet插件:可以用一些速记符生成符合语法规则的HTMLatom-beautify:辅助缩进，提高代码可读性autocomplete-paths：输入文件名时自动补全引用api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示lint">
@@ -300,7 +300,10 @@
 
       
         <h2 id="Atom官网-atom-io"><a href="#Atom官网-atom-io" class="headerlink" title="Atom官网:atom.io"></a>Atom官网:atom.io</h2><h4 id="Atom插件"><a href="#Atom插件" class="headerlink" title="Atom插件"></a>Atom插件</h4><blockquote>
-<p>File-&gt;Settings control + ， 打开setting面板  点击install<br>emmet插件:可以用一些速记符生成符合语法规则的HTML<br>atom-beautify:辅助缩进，提高代码可读性<br>autocomplete-paths：输入文件名时自动补全引用<br>api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示<br>linter：检查代码风格和语法的程序，部分插件的前置插件<br>linter-csslint：提供编写高性能css的建议<br>linter-htmlhint：HTML保持良好格式<br>linter-eslint:检查JavaScript代码的语法，还能通过配置检查代码的风格和格式<br>默认镜像地址为国外的，atom使用apm方式下载，修改apm镜像地址为中国<br><code>apm config set registry http://registry.npm.taobao.org</code><br>前端参考文档：mdn</p>
+<p>File-&gt;Settings control + ， 打开setting面板  点击install<br>emmet插件:可以用一些速记符生成符合语法规则的HTML<br>atom-beautify:辅助缩进，提高代码可读性<br>autocomplete-paths：输入文件名时自动补全引用<br>api-docs：通过键盘查阅文档，文档会在编辑器单独的一个标签面板中显示<br>linter：检查代码风格和语法的程序，部分插件的前置插件<br>linter-csslint：提供编写高性能css的建议//不建议使用，建议使用linter-stylelint<br>linter-stylelint使用方法:在项目根目录新建官方文档的几种文件类型，我的是.stylelintrc.json<br>安装标准配置<code>npm install stylelint-config-standard --save-dev</code><br>.stylelintrc.json文件中引入配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;extends&quot;: &quot;stylelint-config-standard&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>linter-htmlhint：HTML保持良好格式<br>linter-eslint:检查JavaScript代码的语法，还能通过配置检查代码的风格和格式<br>默认镜像地址为国外的，atom使用apm方式下载，修改apm镜像地址为中国<br><code>apm config set registry http://registry.npm.taobao.org</code><br>前端参考文档：mdn</p>
 </blockquote>
 <h4 id="基础命令行"><a href="#基础命令行" class="headerlink" title="基础命令行"></a>基础命令行</h4><blockquote>
 <p>查看当前路径 win:echo %cd%  mac: pwd<br>新建目录: mkdir    新建front-end-dev-book和它的子目录ottergram<br>mac:mkdir font-end-dev-book/ottergram<br>win使用反斜杠: font-end-dev-book\ottergram<br>切换目录:cd<br>列出目录中文件:mac:ls win:dir<br>获取管理员权限:mac:命令前加上sudo win直接用管理员打开<br>退出:ctrl+c</p>
