@@ -229,6 +229,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/JavaScript事件处理/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xcl6214">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/28/JavaScript事件处理/" itemprop="url">JavaScript事件处理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T00:30:28+08:00">
+                2018-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="JavaScript版本"><a href="#JavaScript版本" class="headerlink" title="JavaScript版本"></a>JavaScript版本</h2><blockquote>
+<p>ECMAScript(简称ES) ES3 1999.12<br>ES 5 2009.12<br>ES 6 2015.6</p>
+</blockquote>
+<h2 id="JavaScript中的单引号与双引号"><a href="#JavaScript中的单引号与双引号" class="headerlink" title="JavaScript中的单引号与双引号"></a>JavaScript中的单引号与双引号</h2><p>字符串既可以有单引号分割，也可以用双引号，如果使用双引号，则必须在字符串内部出现的双引号中加上转义字符<br>使用单引号则需要对字符串中的单引号转义</p>
+<h2 id="dom交互"><a href="#dom交互" class="headerlink" title="dom交互"></a>dom交互</h2><p>可以通过document对象及querySelector方法来与dom交互</p>
+<h2 id="阻止链接跳转"><a href="#阻止链接跳转" class="headerlink" title="阻止链接跳转"></a>阻止链接跳转</h2><p><code>event.preventDefault()`</code></p>
+<h2 id="随机数取整"><a href="#随机数取整" class="headerlink" title="随机数取整"></a>随机数取整</h2><p><code>Math.ceil(min);</code><br>向正无穷取整<br><code>Match.floor(max)</code><br>向负无穷取整<br>返回0-10整数<code>Match.floor(Match.random() * 11)</code></p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>假设将一个clickFunction函数作为回调函数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function clickFunction (event)&#123;</span><br><span class="line">  event.preventDefault();</span><br><span class="line">  setDetails(detail);</span><br><span class="line">&#125;</span><br><span class="line">function addHandler(detail)&#123;</span><br><span class="line">  detail.addEventListener(&apos;click&apos; clickFunction); //这行代码会报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用匿名函数则正常运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function addHandler(detail)&#123;</span><br><span class="line">  detail.addEventListener(&apos;click&apos;, function(event)&#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">    setDetails(detail);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为detail在addHandler的函数体内。当一个函数定义在另一个函数内时，前者可以使用后者所有的参数和变量。<br>被称为闭包。<br>从技术上来说，当回调函数最终执行时，addHandler函数的变量和参数将不再存在，他们在韩束节后后便消失了。<br>然而，回调函数”捕获”了addHandler中的变量和参数值，并使用捕获的值来执行语句</p>
+<h2 id="NodeList和-HTMLCollection"><a href="#NodeList和-HTMLCollection" class="headerlink" title="NodeList和 HTMLCollection"></a>NodeList和 HTMLCollection</h2><p>document.querySelectorAll()  返回nodelist<br>document.getElementsByTagName() 返回HTMLCollection<br>HTMLCollection 返回的是动态的节点，当删除dom元素时，HTMLCollection也会跟着改变</p>
+<h2 id="JavaScript类型"><a href="#JavaScript类型" class="headerlink" title="JavaScript类型"></a>JavaScript类型</h2><p>基本类型<br>字符串 “asd”<br>数值   1,1.2<br>布尔   true<br>空     null<br>未定义 undefined<br>其他类型均为符合类型或复杂类型 其中包括数组和对象</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/媒体查询自适应布局/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1040,7 +1171,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
