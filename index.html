@@ -229,6 +229,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/使用css营造视觉效果/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xcl6214">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/29/使用css营造视觉效果/" itemprop="url">使用css营造视觉效果</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T09:18:54+08:00">
+                2018-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="隐藏及显示大图"><a href="#隐藏及显示大图" class="headerlink" title="隐藏及显示大图"></a>隐藏及显示大图</h2><p>要求:当用户触发某一条件（如按下esc）时修改页面样式。<br>一种方法是创建新的选择器，并且用JavaScript把这两个类添加到目标元素上去，但效率并不高。<br>更好的方法是只是用JavaScript添加一个类选择器，并使其影响整个布局。<br>然后就可以通过这个新选择其定位作为额后代的类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.hidden .class1 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">.hidden .class2 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>直接为他们的父节点添加hidden类即可</p>
+<h2 id="过渡改变状态"><a href="#过渡改变状态" class="headerlink" title="过渡改变状态"></a>过渡改变状态</h2><p>鼠标停留在盒子上时改变盒子大小<br>使用修饰符:hover 来说明此样式仅应用于鼠标悬停时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box:hover &#123;</span><br><span class="line">  transform: scale(1.2);</span><br><span class="line">  transition: transform 300ms;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>放大1.2倍时间为300毫秒</p>
+<h2 id="使用JavaScript触发过渡效果"><a href="#使用JavaScript触发过渡效果" class="headerlink" title="使用JavaScript触发过渡效果"></a>使用JavaScript触发过渡效果</h2><p>点击a区域的缩略图时，b区域的大图开始缩小，缩小到最小的点时，更改图片，放大回原来的大小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.b &#123;</span><br><span class="line">  transition: transform 800ms;/* 设置图片过渡时间 */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.is-tiny &#123;</span><br><span class="line">  transform: scale(0.001); /* 图片最小0.001倍 */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b.classList.add(&apos;is-tiny&apos;);</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    b.classList.remove(&apos;is-tiny&apos;);</span><br><span class="line">&#125;,800);</span><br></pre></td></tr></table></figure></p>
+<p>当点击b元素时，为b元素添加is-tiny样式过度时间为800ms，此时图片开始缩小，设置定时函数，800ms后<br>之后回调函数，移除b元素的is-tiny样式，图片开始放大。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/JavaScript事件处理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1171,7 +1296,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

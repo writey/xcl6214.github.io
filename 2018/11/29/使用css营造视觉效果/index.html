@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="原子样式 atomic styling 从细节入手进而谋划大局使代码更加整洁，复用性也更高。这种工作方式被称为原子样式首先为缩略图添加样式，接着是列表布局，之后是整体布局。因为每种浏览器都有自己的默认样式，要让他们一致需要导入同步样式的css:normalize.csshttps://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.">
+<meta name="description" content="隐藏及显示大图要求:当用户触发某一条件（如按下esc）时修改页面样式。一种方法是创建新的选择器，并且用JavaScript把这两个类添加到目标元素上去，但效率并不高。更好的方法是只是用JavaScript添加一个类选择器，并使其影响整个布局。然后就可以通过这个新选择其定位作为额后代的类123456.hidden .class1 &amp;#123;&amp;#125;.hidden .class2 &amp;#123;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="样式">
-<meta property="og:url" content="http://yoursite.com/2018/11/16/样式/index.html">
+<meta property="og:title" content="使用css营造视觉效果">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/使用css营造视觉效果/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="原子样式 atomic styling 从细节入手进而谋划大局使代码更加整洁，复用性也更高。这种工作方式被称为原子样式首先为缩略图添加样式，接着是列表布局，之后是整体布局。因为每种浏览器都有自己的默认样式，要让他们一致需要导入同步样式的css:normalize.csshttps://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.">
+<meta property="og:description" content="隐藏及显示大图要求:当用户触发某一条件（如按下esc）时修改页面样式。一种方法是创建新的选择器，并且用JavaScript把这两个类添加到目标元素上去，但效率并不高。更好的方法是只是用JavaScript添加一个类选择器，并使其影响整个布局。然后就可以通过这个新选择其定位作为额后代的类123456.hidden .class1 &amp;#123;&amp;#125;.hidden .class2 &amp;#123;&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-17T19:13:42.002Z">
+<meta property="og:updated_time" content="2018-11-29T01:19:19.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="样式">
-<meta name="twitter:description" content="原子样式 atomic styling 从细节入手进而谋划大局使代码更加整洁，复用性也更高。这种工作方式被称为原子样式首先为缩略图添加样式，接着是列表布局，之后是整体布局。因为每种浏览器都有自己的默认样式，要让他们一致需要导入同步样式的css:normalize.csshttps://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.">
+<meta name="twitter:title" content="使用css营造视觉效果">
+<meta name="twitter:description" content="隐藏及显示大图要求:当用户触发某一条件（如按下esc）时修改页面样式。一种方法是创建新的选择器，并且用JavaScript把这两个类添加到目标元素上去，但效率并不高。更好的方法是只是用JavaScript添加一个类选择器，并使其影响整个布局。然后就可以通过这个新选择其定位作为额后代的类123456.hidden .class1 &amp;#123;&amp;#125;.hidden .class2 &amp;#123;&amp;">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/16/样式/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/29/使用css营造视觉效果/">
 
 
 
 
 
-  <title>样式 | Hexo</title>
+  <title>使用css营造视觉效果 | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/16/样式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/使用css营造视觉效果/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xcl6214">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">样式</h1>
+          <h1 class="post-title" itemprop="name headline">使用css营造视觉效果</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T21:35:11+08:00">
-                2018-11-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T09:18:54+08:00">
+                2018-11-29
               </time>
             
 
@@ -299,25 +299,12 @@
       
 
       
-        <h3 id="原子样式-atomic-styling"><a href="#原子样式-atomic-styling" class="headerlink" title="原子样式 atomic styling"></a>原子样式 atomic styling</h3><blockquote>
-<p>从细节入手进而谋划大局使代码更加整洁，复用性也更高。这种工作方式被称为原子样式首先为缩略图添加样式，接着是列表布局，之后是整体布局。<br>因为每种浏览器都有自己的默认样式，要让他们一致需要导入同步样式的css:normalize.css<br><code>https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css</code><br>该css应放在自定义css上面以确保浏览器先读取normalize再读取自定义样式</p>
-</blockquote>
-<h3 id="内容分发网络CDN-Content-Delivery-Netword"><a href="#内容分发网络CDN-Content-Delivery-Netword" class="headerlink" title="内容分发网络CDN Content Delivery Netword"></a>内容分发网络CDN Content Delivery Netword</h3><blockquote>
-<p>刚刚加入的normalize.css托管在cdnjs.com上，这是一个公共服务器，是内容分发网络的一部分<br>cdn在世界各地都有服务器，每台服务器上都有相同文件的副本。用户发出请求后，将通过最近的服务器返回文件，减少加载时间<br>cdnjs.com上托管了各种版本的前端流行库和框架</p>
-</blockquote>
-<h3 id="css样式优先级"><a href="#css样式优先级" class="headerlink" title="css样式优先级"></a>css样式优先级</h3><blockquote>
-<p>优先级确保样式仅应用于特定的一组元素，且决定了选择器的相对权重。若样式表包含应用与想象铜元素的多个样式，将会应用选择其优先级较高的样式</p>
-</blockquote>
-<h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><blockquote>
-<p>一个元素的的盒模型由四个部分组成：内容、内边距、边框、外边距<br>display:block 可以使元素占据包含它们的元素的完整宽度<br>display:inline是元素宽度与内容自适应</p>
-</blockquote>
-<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href=&quot;#&quot;] &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>为所有 href属性为#的 a标签添加 下划线为none的属性<br>为image设置width:100%的属性可以使图片随着父容器大小而改变，如改变窗口大小时</p>
-</blockquote>
-<h3 id="样式继承"><a href="#样式继承" class="headerlink" title="样式继承"></a>样式继承</h3><blockquote>
-<p>并非所有属性都会被继承，border就不行</p>
-</blockquote>
+        <h2 id="隐藏及显示大图"><a href="#隐藏及显示大图" class="headerlink" title="隐藏及显示大图"></a>隐藏及显示大图</h2><p>要求:当用户触发某一条件（如按下esc）时修改页面样式。<br>一种方法是创建新的选择器，并且用JavaScript把这两个类添加到目标元素上去，但效率并不高。<br>更好的方法是只是用JavaScript添加一个类选择器，并使其影响整个布局。<br>然后就可以通过这个新选择其定位作为额后代的类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.hidden .class1 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">.hidden .class2 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>直接为他们的父节点添加hidden类即可</p>
+<h2 id="过渡改变状态"><a href="#过渡改变状态" class="headerlink" title="过渡改变状态"></a>过渡改变状态</h2><p>鼠标停留在盒子上时改变盒子大小<br>使用修饰符:hover 来说明此样式仅应用于鼠标悬停时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box:hover &#123;</span><br><span class="line">  transform: scale(1.2);</span><br><span class="line">  transition: transform 300ms;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>放大1.2倍时间为300毫秒</p>
+<h2 id="使用JavaScript触发过渡效果"><a href="#使用JavaScript触发过渡效果" class="headerlink" title="使用JavaScript触发过渡效果"></a>使用JavaScript触发过渡效果</h2><p>点击a区域的缩略图时，b区域的大图开始缩小，缩小到最小的点时，更改图片，放大回原来的大小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.b &#123;</span><br><span class="line">  transition: transform 800ms;/* 设置图片过渡时间 */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.is-tiny &#123;</span><br><span class="line">  transform: scale(0.001); /* 图片最小0.001倍 */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b.classList.add(&apos;is-tiny&apos;);</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    b.classList.remove(&apos;is-tiny&apos;);</span><br><span class="line">&#125;,800);</span><br></pre></td></tr></table></figure></p>
+<p>当点击b元素时，为b元素添加is-tiny样式过度时间为800ms，此时图片开始缩小，设置定时函数，800ms后<br>之后回调函数，移除b元素的is-tiny样式，图片开始放大。</p>
 
       
     </div>
@@ -342,8 +329,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/16/开始第一个项目/" rel="next" title="开始第一个项目">
-                <i class="fa fa-chevron-left"></i> 开始第一个项目
+              <a href="/2018/11/28/JavaScript事件处理/" rel="next" title="JavaScript事件处理">
+                <i class="fa fa-chevron-left"></i> JavaScript事件处理
               </a>
             
           </div>
@@ -351,10 +338,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/18/flexbox响应式布局/" rel="prev" title="flexbox响应式布局">
-                flexbox响应式布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -468,7 +451,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原子样式-atomic-styling"><span class="nav-number">1.</span> <span class="nav-text">原子样式 atomic styling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容分发网络CDN-Content-Delivery-Netword"><span class="nav-number">2.</span> <span class="nav-text">内容分发网络CDN Content Delivery Netword</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css样式优先级"><span class="nav-number">3.</span> <span class="nav-text">css样式优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型"><span class="nav-number">4.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样式"><span class="nav-number">5.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样式继承"><span class="nav-number">6.</span> <span class="nav-text">样式继承</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#隐藏及显示大图"><span class="nav-number">1.</span> <span class="nav-text">隐藏及显示大图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过渡改变状态"><span class="nav-number">2.</span> <span class="nav-text">过渡改变状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用JavaScript触发过渡效果"><span class="nav-number">3.</span> <span class="nav-text">使用JavaScript触发过渡效果</span></a></li></ol></div>
             
 
           </div>
